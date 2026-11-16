@@ -6,7 +6,7 @@ method = "get"
 max_retries = 2
 timeout = 20
 include_mail = false
-include_fragments = false
+include_fragments = "none"
 
 # The LinkedIn profile was copied from the previous Wix site and may be
 # unpublished. index.html flags it with a TODO. Delete this exclusion after
@@ -16,9 +16,10 @@ include_fragments = false
 # exist until this site replaces the current Wix site. The checker would
 # report them as broken until launch day.
 exclude = [
-  '^https://www\\.linkedin\\.com/in/michael-brown-baacinc/?$',
-  '^https://www\\.baacinc\\.com/assets/',
+  '^https://www\.linkedin\.com/in/michael-brown-baacinc/?$',
+  '^https://www\.baacinc\.com/assets/',
   '^tel:',
+  '^https?://(127\.0\.0\.1|localhost)([:/]|$)',
 ]
 
 exclude_path = [
