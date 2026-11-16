@@ -1,0 +1,12 @@
+{
+  "name": "baacinc-website",
+  "private": true,
+  "description": "Static website for BAACINC. There are no runtime dependencies. html-validate is for development and the pull-request check only.",
+  "scripts": {
+    "validate": "html-validate index.html 404.html",
+    "preview": "python3 -m http.server 8080"
+  },
+  "devDependencies": {
+    "html-validate": "^11.21.1"
+  }
+}

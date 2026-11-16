@@ -1,0 +1,27 @@
+# Link check for the static site and the docs.
+# mailto is not a page we can fetch. Telephone links are not http.
+verbose = "warn"
+no_progress = true
+method = "get"
+max_retries = 2
+timeout = 20
+include_mail = false
+include_fragments = false
+
+# The LinkedIn profile was copied from the previous Wix site and may be
+# unpublished. index.html flags it with a TODO. Delete this exclusion after
+# Michael confirms the profile is the right one.
+#
+# Share-card and photo URLs under https://www.baacinc.com/assets/ do not
+# exist until this site replaces the current Wix site. The checker would
+# report them as broken until launch day.
+exclude = [
+  '^https://www\\.linkedin\\.com/in/michael-brown-baacinc/?$',
+  '^https://www\\.baacinc\\.com/assets/',
+  '^tel:',
+]
+
+exclude_path = [
+  '(^|/)node_modules/',
+  '(^|/)_site/',
+]
