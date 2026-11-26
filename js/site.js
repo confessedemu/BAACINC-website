@@ -22,8 +22,7 @@
   function init() {
     initYear();
     var closeNav = initNav();
-    var openBrief = initForm();
-    initServices(openBrief, closeNav);
+    initForm();
     initNotes(closeNav);
   }
 
@@ -88,71 +87,6 @@
           name.focus();
         }, 0);
       });
-    });
-  }
-
-  function initServices(openBrief, closeNav) {
-    var root = document.querySelector("[data-services]");
-    if (!root) return;
-    var list = root.querySelector("[data-tablist]");
-    var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-tab]"));
-    var panels = Array.prototype.slice.call(root.querySelectorAll("[data-panel]"));
-    if (!list || !tabs.length) return;
-
-    list.setAttribute("role", "tablist");
-    list.setAttribute("aria-label", "Service areas");
-    list.setAttribute("aria-orientation", "vertical");
-
-    function select(index, moveFocus) {
-      tabs.forEach(function (tab, i) {
-        var on = i === index;
-        tab.setAttribute("aria-selected", on ? "true" : "false");
-        tab.tabIndex = on ? 0 : -1;
-        panels[i].classList.toggle("is-active", on);
-      });
-      if (moveFocus) tabs[index].focus();
-      if (window.matchMedia("(max-width: 799px)").matches && panels[index].scrollIntoView) {
-        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        panels[index].scrollIntoView({
-          behavior: reduce ? "auto" : "smooth",
-          block: "nearest"
-        });
-      }
-    }
-
-    tabs.forEach(function (tab, index) {
-      tab.setAttribute("role", "tab");
-      tab.setAttribute("aria-controls", panels[index].id);
-      tab.setAttribute("aria-selected", index === 0 ? "true" : "false");
-      tab.tabIndex = index === 0 ? 0 : -1;
-      panels[index].setAttribute("role", "tabpanel");
-      panels[index].setAttribute("aria-labelledby", tab.id);
-      tab.addEventListener("click", function () {
-        select(index, false);
-      });
-      tab.addEventListener("keydown", function (event) {
-        var next = null;
-        if (event.key === "ArrowDown" || event.key === "ArrowRight") {
-          next = (index + 1) % tabs.length;
-        } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
-          next = (index - 1 + tabs.length) % tabs.length;
-        } else if (event.key === "Home") {
-          next = 0;
-        } else if (event.key === "End") {
-          next = tabs.length - 1;
-        }
-        if (next === null) return;
-        event.preventDefault();
-        select(next, true);
-      });
-    });
-
-    root.addEventListener("click", function (event) {
-      var ask = event.target.closest("[data-ask]");
-      if (!ask || !openBrief) return;
-      event.preventDefault();
-      if (closeNav) closeNav();
-      openBrief(ask.getAttribute("data-ask"));
     });
   }
 
