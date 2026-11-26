@@ -1,0 +1,27 @@
+name: HTML and accessibility
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  html-validate:
+    name: html-validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Validate HTML
+        run: npm run validate
