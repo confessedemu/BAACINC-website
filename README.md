@@ -30,7 +30,7 @@ What to try:
 - **Book a 20-minute project call** and **Email Michael**.
 - Submit an empty brief and confirm the form names the missing fields. Fill it and choose **Send the brief**. Your email app should open a message to michael.brown@baacinc.com. If it does not, use **Copy brief**.
 - Reload the page before sending. The draft should still be there. **Clear draft** removes it.
-- Narrow the window, or use a phone. The menu becomes a button, and a bar at the bottom offers **Call** and **Email**.
+- Narrow the window, or use a phone. The menu becomes a button beside the monogram, and after you scroll past the hero a bar offers **Book a 20-minute project call**.
 
 Check the markup with:
 

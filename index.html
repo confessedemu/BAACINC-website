@@ -57,15 +57,12 @@
   <header class="site-header" id="top">
     <div class="wrap header-bar">
       <a class="brand" href="/">
-        <svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
-          <rect width="64" height="64" fill="#12352C"/>
-          <text x="32" y="42" text-anchor="middle" font-family="Georgia, 'Iowan Old Style', serif" font-size="26" fill="#F4EFE6">BA</text>
+        <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+          <rect class="mark-bg" width="64" height="64"/>
+          <text class="mark-letters" x="32" y="42" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="26">BA</text>
         </svg>
-        <span>BAACINC</span>
+        <span class="brand-name">BAACINC</span>
       </a>
-      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-        <span class="nav-toggle-bars" aria-hidden="true"></span>
-      </button>
       <nav class="primary-nav" id="site-nav" aria-label="Primary">
         <ul>
           <li><a href="/#services">Services</a></li>
@@ -75,39 +72,52 @@
           <li><a href="/#contact">Contact</a></li>
         </ul>
       </nav>
+      <a class="button header-cta" href="tel:+15875019612">Book a call</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
 
   <main id="content">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="kicker">Calgary and Edmonton</p>
-          <h1 id="hero-title">From policy to permit.</h1>
-          <p class="lede">Registered Professional Planner (RPP) planning that turns housing, land and economic-development questions into approvals, funding and policy that hold up.</p>
-          <div class="actions">
-            <a class="button" href="tel:+15875019612">Book a 20-minute project call</a>
-            <a class="button button-secondary" href="mailto:michael.brown@baacinc.com">Email Michael</a>
+      <div class="wrap">
+        <p class="kicker">Calgary and Edmonton</p>
+        <div class="hero-main">
+          <div class="hero-copy">
+            <h1 id="hero-title">From policy to permit.</h1>
+            <p class="lede">Registered Professional Planner (RPP) planning that turns housing, land and economic-development questions into approvals, funding and policy that hold up.</p>
+            <div class="actions">
+              <a class="button" href="tel:+15875019612">Book a 20-minute project call</a>
+              <a class="button button-secondary" href="mailto:michael.brown@baacinc.com">Email Michael</a>
+            </div>
           </div>
-          <p class="hero-note">Michael Brown, RPP, MCIP</p>
+          <figure class="hero-media">
+            <svg viewBox="0 0 400 500" role="img" aria-label="Abstract plan of parcels, streets, and a transit line." preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="500" fill="#f4efe6"/>
+              <g fill="none" stroke="#12352C" stroke-width="1.5">
+                <path d="M28 36h150v92H28zM178 36h194v58H178zM178 94h110v78H178zM288 94h84v120H288zM28 128h150v110H28zM28 238h118v96H28zM146 238h142v70H146zM146 308h86v78H146zM232 172h140v136H232zM28 334h118v130H28zM146 386h142v78H146zM288 308h84v156H288z"/>
+              </g>
+              <path d="M24 214h352" fill="none" stroke="#12352C" stroke-width="4"/>
+              <path d="M206 24v452" fill="none" stroke="#0c241e" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="square"/>
+              <circle cx="206" cy="214" r="5" fill="#12352C"/>
+            </svg>
+          </figure>
+          <p class="hero-note">Michael Brown · RPP · MCIP</p>
         </div>
-        <figure class="hero-media">
-          <img src="/assets/engagement.jpg" width="1600" height="1600" alt="Illustration of people gathered in a city plaza, talking together.">
-        </figure>
       </div>
     </section>
 
-    <section class="trust" aria-label="Credentials at a glance">
+    <section class="trust" aria-label="Practice at a glance">
       <ul class="wrap">
-        <li><strong>RPP</strong><span>Registered Professional Planner</span></li>
-        <li><strong>MCIP</strong><span>Canadian Institute of Planners</span></li>
-        <li><strong>MSc</strong><span>Urban management and development</span></li>
-        <li><strong>15+ years</strong><span>Municipal and consulting practice</span></li>
+        <li><strong>15+ years</strong><span>Planning practice</span></li>
+        <li><strong>8 years</strong><span>City of Edmonton</span></li>
+        <li><strong>2024</strong><span>BAACINC founded</span></li>
         <li><strong>Two cities</strong><span>Calgary and Edmonton</span></li>
       </ul>
     </section>
 
-    <section class="section" id="services" aria-labelledby="services-title">
+    <section class="section section-white" id="services" aria-labelledby="services-title">
       <div class="wrap">
         <div class="section-head">
           <p class="kicker">Services</p>
@@ -117,102 +127,110 @@
         <!-- TODO confirm: development pro forma examples. None were found, so pro formas are not a headline service. -->
         <!-- TODO confirm: energy-retrofit projects, before retrofit work is named as its own service. -->
         <!-- TODO confirm: years and deliverables for TOD or land value capture, and for Parks integrated infrastructure, before either is featured. -->
-        <div class="cards cards-5">
+        <div class="cards cards-services">
           <article class="card">
             <h3>Rezoning, permits and approvals</h3>
             <p>Rezoning, plan amendments, and development and building permit applications, taken through to a decision.</p>
+            <a class="card-link" href="/#contact">Bring this to a brief</a>
           </article>
           <article class="card">
             <h3>Housing policy and affordable housing</h3>
             <p>Housing needs, policy, and planning for affordable and garden-suite housing.</p>
+            <a class="card-link" href="/#contact">Bring this to a brief</a>
           </article>
           <article class="card">
             <h3>Growth, land use and area plans</h3>
             <p>Conceptual schemes and area planning that fit how a region wants to grow.</p>
+            <a class="card-link" href="/#contact">Bring this to a brief</a>
           </article>
           <article class="card">
             <h3>Municipal economic development</h3>
             <p>Economic development strategy and land-value analysis for municipalities and landowners.</p>
+            <a class="card-link" href="/#contact">Bring this to a brief</a>
           </article>
           <article class="card">
             <h3>Energy, infrastructure and engagement</h3>
             <p>Community energy and infrastructure policy, and inclusive public engagement.</p>
+            <a class="card-link" href="/#contact">Bring this to a brief</a>
           </article>
+          <a class="card card-cta" href="tel:+15875019612">
+            <h3>Not sure which fits?</h3>
+            <p>Book a 20-minute call.</p>
+            <span class="card-link">Book a 20-minute project call</span>
+          </a>
         </div>
-        <p class="section-cta">
-          <a class="button" href="tel:+15875019612">Book a 20-minute project call</a>
-        </p>
       </div>
     </section>
 
-    <section class="section section-alt" id="work" aria-labelledby="work-title">
+    <section class="section" id="work" aria-labelledby="work-title">
       <div class="wrap">
         <div class="section-head">
           <p class="kicker">Selected work</p>
           <h2 id="work-title">Projects carried through.</h2>
           <p>Consulting work is named for the employer. Community work is named for the organization.</p>
         </div>
-        <div class="cards cards-8">
-          <article class="card">
+        <div class="cards cards-work">
+          <article class="card work-card">
             <!-- TODO confirm: project name. The resume says "Blackfoot Drive"; an earlier note said "Blackfoot Trail". This card uses neither. Municipality and approval status are also unconfirmed. -->
-            <p class="meta"><span>QuantumPlace Consulting</span><span>2023–24</span></p>
+            <p class="tag">Rezoning and approvals</p>
             <h3>Blackfoot rezoning (mobile home community)</h3>
             <p class="summary">Managed a rezoning for a mobile home community, balancing what the community needed with the regulatory requirements.</p>
-            <p class="tag">Rezoning and approvals</p>
+            <p class="card-foot">Mobile-home community · QuantumPlace Consulting, 2023–24</p>
           </article>
-          <article class="card">
+          <article class="card work-card">
             <!-- TODO confirm: whether Horse Hills is part of these Urban Star conceptual schemes, and what the investor package contained. The client is not named. -->
-            <p class="meta"><span>QuantumPlace Consulting</span><span>2023–24</span></p>
+            <p class="tag">Growth and land use</p>
             <h3>Urban Star conceptual schemes and investor package (with QuantumPlace)</h3>
             <p class="summary">Led conceptual schemes so density could be redistributed within regional growth thresholds.</p>
-            <p class="tag">Growth and land use</p>
+            <p class="card-foot">Calgary-region land · QuantumPlace Consulting, 2023–24</p>
           </article>
-          <article class="card">
+          <article class="card work-card">
             <!-- TODO confirm: the restaurant brand, how many sites and jurisdictions, and the program year. Published only as a national quick-service restaurant brand during the 2022–23 Dillon role. -->
-            <p class="meta"><span>Dillon Consulting</span><span>2022–23</span></p>
+            <p class="tag">Rezoning and approvals</p>
             <h3>Permitting for a national quick-service restaurant brand</h3>
             <p class="summary">Managed permitting workflows across jurisdictions for a renovation program.</p>
-            <p class="tag">Rezoning and approvals</p>
+            <p class="card-foot">National restaurant brand · Dillon Consulting, 2022–23</p>
           </article>
-          <article class="card">
+          <article class="card work-card">
             <!-- TODO confirm: which municipality this energy strategy was for, and whether the work is public. -->
-            <p class="meta"><span>Dillon Consulting</span><span>2022–23</span></p>
+            <p class="tag">Energy and engagement</p>
             <h3>Community energy management strategy</h3>
             <p class="summary">Policy analysis for community energy and infrastructure plans, weighing social, economic and environmental impacts.</p>
-            <p class="tag">Energy and engagement</p>
+            <p class="card-foot">Municipal client · Dillon Consulting, 2022–23</p>
           </article>
-          <article class="card">
+          <article class="card work-card">
             <!-- TODO confirm: course title or code (notes refer to EXLUP 4107) and the exact years taught. The card does not print the course code. -->
-            <p class="meta"><span>University of Alberta</span><span>2020–21</span></p>
+            <p class="tag">Economic development</p>
             <h3>Municipal economic development courses</h3>
             <p class="summary">Developed and taught municipal economic development for working professionals at the Faculty of Extension.</p>
-            <p class="tag">Economic development</p>
+            <p class="card-foot">Working professionals · University of Alberta, 2020–21</p>
           </article>
-          <article class="card">
-            <p class="meta"><span>City of Edmonton</span><span>2013–18</span></p>
+          <article class="card work-card">
+            <p class="tag">Housing policy</p>
             <h3>Cornerstones and housing policy</h3>
             <p class="summary">As Principal Planner, housing policy and needs studies under The Way Ahead, and research and consultation for the Cornerstones program.</p>
-            <p class="tag">Housing policy</p>
+            <p class="card-foot">Municipal employer · City of Edmonton, 2013–18</p>
           </article>
-          <article class="card">
+          <article class="card work-card">
             <!-- TODO confirm: Michael's role on Finding Common Ground, and which zoning bylaw amendments were adopted. -->
-            <p class="meta"><span>City of Edmonton</span><span>2010–13</span></p>
+            <p class="tag">Rezoning and approvals</p>
             <h3>Finding Common Ground and joint use</h3>
             <p class="summary">Zoning and joint-use work informed by findings on community leagues, zoning clarity and supportive housing.</p>
-            <p class="tag">Rezoning and approvals</p>
+            <p class="card-foot">Municipal employer · City of Edmonton, 2010–13</p>
           </article>
-          <article class="card">
+          <article class="card work-card">
             <!-- TODO confirm: the resume says the children's tenant-rights campaign secured legislative change. That outcome is not stated here. -->
-            <p class="meta"><span>Edmonton</span><span>2013–present</span></p>
+            <p class="tag">Housing policy</p>
             <h3>Child Friendly Housing Coalition and Central McDougall</h3>
             <p class="summary">Founding director of a province-wide campaign for children's tenant rights, and a director of the Central McDougall Community League.</p>
-            <p class="tag">Housing policy</p>
+            <p class="card-foot">Community organizations · Edmonton, 2013–present</p>
           </article>
         </div>
+        <p class="inline-cta"><a href="tel:+15875019612">Step 1 starts with a 20-minute call →</a></p>
       </div>
     </section>
 
-    <section class="section" id="approach" aria-labelledby="approach-title">
+    <section class="section section-white" id="approach" aria-labelledby="approach-title">
       <div class="wrap">
         <div class="section-head">
           <p class="kicker">Approach</p>
@@ -235,10 +253,11 @@
             <p>An application, a study, or advice a council, a funder or a project team can use.</p>
           </li>
         </ol>
+        <p class="inline-cta"><a href="tel:+15875019612">Step 1 starts with a 20-minute call →</a></p>
       </div>
     </section>
 
-    <section class="section section-alt" id="about" aria-labelledby="about-title">
+    <section class="section" id="about" aria-labelledby="about-title">
       <div class="wrap about-grid">
         <figure class="about-figure">
           <img class="portrait" src="/assets/michael-brown.jpg" width="1095" height="1460" alt="Michael Brown, founder and principal of BAACINC, smiling outdoors with a stone church behind him.">
@@ -249,26 +268,45 @@
           <h2 id="about-title">Michael Brown</h2>
           <!-- TODO confirm: the older line "247 cities / 26 countries / 4 continents" has no source in the content brief, so it is not published. -->
           <p>Michael Brown, RPP, MCIP, is the founder and principal of BAACINC (Brown &amp; Associates Consulting Inc.). He has over 15 years of planning experience, including eight years at the City of Edmonton, plus senior roles at Dillon Consulting and QuantumPlace. He has consulted independently since 2018 and founded BAACINC in 2024. He helps landowners, non-profits and municipalities in Calgary and Edmonton move housing and development projects from policy to permit.</p>
-          <ul class="credential-list">
-            <li>MSc Urban Management and Development, IHS, Erasmus University Rotterdam (2019–21)</li>
-            <li>BA Urban Geography and Art &amp; Design, University of Alberta (2003–07)</li>
-            <li>RPP (APPI) and MCIP, 2014</li>
-            <li>GISP, 2011</li>
-            <li>LEED Green Associate</li>
-            <li>CPTED</li>
-            <li>Urban Design Certificate, SFU, 2015</li>
-            <li>Applied Land Use Planning Certificate, University of Alberta, 2011</li>
-            <li>Public consultation training, 2011</li>
-            <li>Indigenous awareness training, 2017</li>
-            <li>Online engagement training</li>
-            <li>Former lecturer in local economic development, University of Alberta Faculty of Extension</li>
-            <li>Emerald Award nominee, for food security and founding two community gardens</li>
-          </ul>
+          <p class="cred-lead">RPP and MCIP. MSc in Urban Management and Development. More than 15 years in municipal and consulting practice.</p>
+          <details class="creds">
+            <summary>Full credentials</summary>
+            <div class="cred-groups">
+              <div>
+                <h3>Designations</h3>
+                <ul>
+                  <li>RPP (APPI) and MCIP, 2014</li>
+                  <li>GISP, 2011</li>
+                  <li>LEED Green Associate</li>
+                  <li>CPTED</li>
+                  <li>Urban Design Certificate, SFU, 2015</li>
+                  <li>Applied Land Use Planning Certificate, University of Alberta, 2011</li>
+                  <li>Public consultation training, 2011</li>
+                  <li>Indigenous awareness training, 2017</li>
+                  <li>Online engagement training</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Education</h3>
+                <ul>
+                  <li>MSc Urban Management and Development, IHS, Erasmus University Rotterdam (2019–21)</li>
+                  <li>BA Urban Geography and Art &amp; Design, University of Alberta (2003–07)</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Experience</h3>
+                <ul>
+                  <li>Former lecturer in local economic development, University of Alberta Faculty of Extension</li>
+                  <li>Emerald Award nominee, for food security and founding two community gardens</li>
+                </ul>
+              </div>
+            </div>
+          </details>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="section section-white" id="contact" aria-labelledby="contact-title">
       <div class="wrap contact-grid">
         <div>
           <p class="kicker">Contact</p>
@@ -285,7 +323,6 @@
               <a href="https://www.linkedin.com/in/michael-brown-baacinc/" rel="noopener noreferrer" target="_blank">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
             </li>
           </ul>
-          <p><a href="#privacy">How the project brief works</a></p>
         </div>
         <div>
           <h3>Project brief</h3>
@@ -301,22 +338,17 @@
                 <p class="error" id="brief-name-error"></p>
               </div>
               <div class="field">
-                <label for="brief-organization">Organization <span class="optional">(optional)</span></label>
-                <input id="brief-organization" name="organization" type="text" autocomplete="organization" maxlength="160">
-              </div>
-              <div class="field">
                 <label for="brief-email">Email <span class="req">(required)</span></label>
                 <input id="brief-email" name="email" type="email" autocomplete="email" maxlength="160" required>
                 <p class="error" id="brief-email-error"></p>
               </div>
-              <div class="field">
-                <label for="brief-phone">Phone <span class="optional">(optional)</span></label>
-                <input id="brief-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
-                <p class="error" id="brief-phone-error"></p>
+              <div class="field field-optional">
+                <label for="brief-organization">Organization <span class="optional">(optional)</span></label>
+                <input id="brief-organization" name="organization" type="text" autocomplete="organization" maxlength="160">
               </div>
-              <div class="field span-2">
-                <label for="brief-service">Service <span class="req">(required)</span></label>
-                <select id="brief-service" name="service" required>
+              <div class="field field-optional">
+                <label for="brief-service">Service <span class="optional">(optional)</span></label>
+                <select id="brief-service" name="service">
                   <option value="">Select a service</option>
                   <option value="rezoning-permits">Rezoning, permits and approvals</option>
                   <option value="housing-policy">Housing policy and affordable housing</option>
@@ -324,21 +356,27 @@
                   <option value="economic-development">Municipal economic development</option>
                   <option value="energy-engagement">Energy, infrastructure and engagement</option>
                 </select>
-                <p class="error" id="brief-service-error"></p>
               </div>
-              <div class="field">
-                <label for="brief-city">City <span class="optional">(optional)</span></label>
-                <select id="brief-city" name="city">
-                  <option value="">Select if you know</option>
-                  <option>Calgary</option>
-                  <option>Edmonton</option>
-                  <option>Calgary and Edmonton</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="brief-timing">Timing <span class="optional">(optional)</span></label>
-                <input id="brief-timing" name="timing" type="text" maxlength="120" autocomplete="off">
+              <div class="field-trio">
+                <div class="field field-optional">
+                  <label for="brief-phone">Phone <span class="optional">(optional)</span></label>
+                  <input id="brief-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+                  <p class="error" id="brief-phone-error"></p>
+                </div>
+                <div class="field field-optional">
+                  <label for="brief-city">City <span class="optional">(optional)</span></label>
+                  <select id="brief-city" name="city">
+                    <option value="">Select if you know</option>
+                    <option>Calgary</option>
+                    <option>Edmonton</option>
+                    <option>Calgary and Edmonton</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="field field-optional">
+                  <label for="brief-timing">Timing <span class="optional">(optional)</span></label>
+                  <input id="brief-timing" name="timing" type="text" maxlength="120" autocomplete="off">
+                </div>
               </div>
               <div class="field span-2">
                 <label for="brief-message">Brief <span class="req">(required)</span></label>
@@ -350,13 +388,16 @@
             <p id="form-status" class="form-status" role="status"></p>
             <div class="form-actions">
               <button type="submit" class="button">Send the brief</button>
-              <button type="button" class="button button-secondary" id="clear-draft">Clear draft</button>
+              <button type="button" class="text-link" id="clear-draft">Clear draft</button>
+            </div>
+            <div class="privacy" id="privacy">
+              <p>Choosing “Send the brief” opens an email in your own email app, addressed to michael.brown@baacinc.com. Nothing is sent to BAACINC until you send that email. A draft stays in this browser only. “Clear draft” removes it.</p>
             </div>
             <div id="brief-fallback" class="fallback" hidden>
               <h3>If your email app did not open</h3>
               <p>Copy this brief and send it to <a href="mailto:michael.brown@baacinc.com">michael.brown@baacinc.com</a>. Nothing is sent until you send that email.</p>
               <div class="fallback-actions">
-                <button type="button" class="button" id="copy-brief">Copy brief</button>
+                <button type="button" class="button button-secondary" id="copy-brief">Copy brief</button>
                 <a id="mailto-fallback" href="mailto:michael.brown@baacinc.com">Open the email again</a>
               </div>
               <div class="field">
@@ -365,11 +406,6 @@
               </div>
             </div>
           </form>
-          <div class="privacy" id="privacy">
-            <h3>Privacy</h3>
-            <p>This form does not use a server and it does not use a form service. Choosing “Send the brief” opens an email in your own email app, addressed to michael.brown@baacinc.com, with your answers filled in. BAACINC receives the note only if you send that email.</p>
-            <p>While you type, a draft is saved in this browser only, so you can finish it later. That draft stays on your device. BAACINC cannot see it. “Clear draft” removes it. Nothing else is stored.</p>
-          </div>
         </div>
       </div>
     </section>
@@ -378,11 +414,11 @@
   <footer class="site-footer">
     <div class="wrap footer-bar">
       <a class="brand" href="/">
-        <svg viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
-          <rect width="64" height="64" fill="#12352C"/>
-          <text x="32" y="42" text-anchor="middle" font-family="Georgia, 'Iowan Old Style', serif" font-size="26" fill="#F4EFE6">BA</text>
+        <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true">
+          <rect class="mark-bg" width="64" height="64"/>
+          <text class="mark-letters" x="32" y="42" text-anchor="middle" font-family="Georgia, Palatino, serif" font-size="26">BA</text>
         </svg>
-        <span>BAACINC</span>
+        <span class="brand-name">BAACINC</span>
       </a>
       <ul class="footer-links">
         <li><a href="tel:+15875019612">1.587.501.9612</a></li>
@@ -397,9 +433,8 @@
     </div>
   </footer>
 
-  <nav class="callbar" aria-label="Quick contact">
-    <a href="tel:+15875019612">Call</a>
-    <a href="mailto:michael.brown@baacinc.com">Email</a>
+  <nav class="callbar" aria-label="Book a call">
+    <a href="tel:+15875019612">Book a 20-minute project call</a>
   </nav>
 </body>
 </html>

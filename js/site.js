@@ -24,6 +24,21 @@
     var closeNav = initNav();
     initForm();
     initNotes(closeNav);
+    initCallbar();
+  }
+
+  function initCallbar() {
+    var hero = document.querySelector(".hero");
+    if (!hero || !("IntersectionObserver" in window)) {
+      document.body.classList.add("show-callbar");
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        document.body.classList.toggle("show-callbar", !entry.isIntersecting);
+      });
+    }, { threshold: 0 });
+    observer.observe(hero);
   }
 
   function initYear() {
@@ -150,7 +165,7 @@
 
     function serviceLabel() {
       var select = field("brief-service");
-      if (!select || select.selectedIndex < 0) return "";
+      if (!select || !select.value || select.selectedIndex < 0) return "Not given";
       return select.options[select.selectedIndex].text.replace(/\s+/g, " ").trim();
     }
 
@@ -197,8 +212,6 @@
           ? "Enter a phone number with at least 7 digits, or leave it blank."
           : ""
       );
-
-      add("brief-service", field("brief-service").value ? "" : "Choose the service this note is about.");
 
       var message = field("brief-message").value.trim();
       add(
