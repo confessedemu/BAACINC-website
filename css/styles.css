@@ -1,15 +1,50 @@
+@font-face {
+  font-family: Fraunces;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/fraunces-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-latin-700.woff2") format("woff2");
+}
+
 :root {
-  --paper: #f4efe6;
+  --paper: #f4eee4;
+  --linen: #e8dfd2;
   --white: #ffffff;
-  --ink: #143128;
-  --spruce: #12352c;
-  --spruce-deep: #0c241e;
-  --muted: #2f4a40;
+  --ink: #3b2a20;
+  --river: #24425c;
+  --river-deep: #1a3248;
+  --muted: #4a4038;
   --line: #d2c7b4;
-  --border: #3e564c;
+  --border: #6f655c;
   --error: #6e1c18;
-  --serif: "Iowan Old Style", Charter, "Palatino Linotype", Georgia, serif;
-  --sans: system-ui, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --rust: #a04a22;
+  --sage: #a9b89a;
+  --serif: Fraunces, "Iowan Old Style", Charter, "Palatino Linotype", Georgia, serif;
+  --sans: "Source Sans 3", system-ui, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --header: 4.75rem;
   --wrap: 72rem;
   --section: 4rem;
@@ -48,7 +83,7 @@ h2 {
   font-family: var(--serif);
   font-weight: 500;
   line-height: 1.12;
-  color: var(--spruce);
+  color: var(--river);
   letter-spacing: -0.02em;
 }
 
@@ -66,9 +101,9 @@ h3 {
   margin: 0 0 0.5rem;
   font-family: var(--sans);
   font-size: 1.125rem;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.3;
-  color: var(--spruce);
+  color: var(--river);
 }
 
 p {
@@ -77,7 +112,7 @@ p {
 }
 
 a {
-  color: var(--spruce-deep);
+  color: var(--river-deep);
 }
 
 .wrap {
@@ -109,7 +144,7 @@ a {
   z-index: 80;
   padding: 0.6rem 0.9rem;
   background: var(--white);
-  color: var(--spruce);
+  color: var(--river);
   transform: translateY(-150%);
 }
 
@@ -134,7 +169,7 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid var(--spruce);
+  outline: 3px solid var(--river);
   outline-offset: 3px;
 }
 
@@ -142,9 +177,9 @@ a {
 .tag,
 .step-num {
   margin: 0 0 0.65rem;
-  color: var(--spruce);
+  color: var(--muted);
   font-size: 0.8125rem;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: 0.08em;
   line-height: 1.3;
   text-transform: uppercase;
@@ -171,7 +206,7 @@ a {
   gap: 0.7rem;
   min-height: 40px;
   padding: 0.2rem 0;
-  color: var(--spruce);
+  color: var(--river);
   font-family: var(--serif);
   font-size: 1.2rem;
   letter-spacing: 0.08em;
@@ -187,7 +222,7 @@ a {
 }
 
 .mark-bg {
-  fill: var(--spruce);
+  fill: var(--river);
 }
 
 .mark-letters {
@@ -212,7 +247,7 @@ a {
   display: block;
   width: 1.15rem;
   height: 2px;
-  background: var(--spruce);
+  background: var(--river);
   position: relative;
 }
 
@@ -261,7 +296,7 @@ a {
   display: inline-flex;
   align-items: center;
   min-height: 2.75rem;
-  color: var(--spruce);
+  color: var(--river);
   font-weight: 600;
   text-decoration: none;
 }
@@ -272,10 +307,12 @@ a {
   text-underline-offset: 0.2em;
 }
 
-.header-cta {
+.header-cta,
+.header-cta:hover {
   margin-left: 0.5rem;
   min-height: 2.75rem;
   padding: 0.45rem 0.9rem;
+  color: var(--paper);
   white-space: nowrap;
 }
 
@@ -287,9 +324,9 @@ a {
 .hero-main {
   display: grid;
   grid-template-areas:
+    "media"
     "copy"
-    "note"
-    "media";
+    "note";
   gap: 1.25rem;
 }
 
@@ -318,28 +355,35 @@ a {
 
 .hero-note {
   margin: 0;
-  color: var(--spruce);
+  color: var(--river);
   font-size: 1rem;
   font-weight: 600;
 }
 
+.hero-rule {
+  display: block;
+  width: 3.25rem;
+  height: 3px;
+  margin: 0 0 1rem;
+  background: var(--rust);
+}
+
 .hero-media {
-  position: relative;
   margin: 0;
-  min-height: 0;
-  border: 1px solid var(--spruce);
+  border: 1px solid var(--river);
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--paper);
-  aspect-ratio: 4 / 5;
+  box-shadow: 10px 10px 0 var(--sage);
 }
 
-.hero-media svg {
-  position: absolute;
-  inset: 0;
+.hero-media img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 18%;
 }
 
 .button {
@@ -348,34 +392,36 @@ a {
   justify-content: center;
   min-height: 3rem;
   padding: 0.7rem 1.1rem;
-  border: 1px solid var(--spruce);
-  background: var(--spruce);
+  border: 1px solid var(--river);
+  background: var(--river);
   color: var(--paper);
   font: inherit;
-  font-weight: 650;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
 }
 
 .button:hover {
-  background: var(--spruce-deep);
-  border-color: var(--spruce-deep);
+  background: var(--river-deep);
+  border-color: var(--river-deep);
   color: var(--paper);
 }
 
 .button-secondary {
   background: transparent;
-  color: var(--spruce);
+  border-color: var(--rust);
+  color: var(--rust);
 }
 
 .button-secondary:hover {
-  background: var(--spruce);
+  background: var(--rust);
+  border-color: var(--rust);
   color: var(--paper);
 }
 
 .button:focus-visible {
-  outline-color: var(--spruce);
+  outline-color: var(--river);
   box-shadow: 0 0 0 4px var(--paper);
 }
 
@@ -386,7 +432,7 @@ a {
   padding: 0;
   border: 0;
   background: none;
-  color: var(--spruce);
+  color: var(--river);
   font: inherit;
   font-size: 1rem;
   text-decoration: underline;
@@ -395,7 +441,7 @@ a {
 }
 
 .trust {
-  background: var(--spruce);
+  background: var(--river);
   color: var(--paper);
 }
 
@@ -423,7 +469,7 @@ a {
   margin-top: 0.4rem;
   color: var(--paper);
   font-size: 0.8125rem;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -474,15 +520,15 @@ a {
 
 .card-link {
   margin-top: auto;
-  color: var(--spruce);
+  color: var(--river);
   font-size: 1rem;
-  font-weight: 650;
+  font-weight: 600;
   text-underline-offset: 0.18em;
 }
 
 .card-cta {
-  background: var(--spruce);
-  border-color: var(--spruce);
+  background: var(--river);
+  border-color: var(--river);
   color: var(--paper);
   text-decoration: none;
 }
@@ -493,8 +539,8 @@ a {
 }
 
 .card-cta:hover {
-  background: var(--spruce-deep);
-  border-color: var(--spruce-deep);
+  background: var(--river-deep);
+  border-color: var(--river-deep);
 }
 
 .work-card .tag {
@@ -510,18 +556,18 @@ a {
   margin: auto 0 0;
   padding-top: 0.85rem;
   border-top: 1px solid var(--line);
-  color: var(--spruce);
+  color: var(--river);
   font-size: 1rem;
   max-width: none;
 }
 
 .inline-cta {
   margin: 2rem 0 0;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .inline-cta a {
-  color: var(--spruce);
+  color: var(--river);
   text-underline-offset: 0.18em;
 }
 
@@ -548,13 +594,13 @@ a {
   object-fit: cover;
   object-position: center 12%;
   background: var(--paper);
-  border: 1px solid var(--spruce);
+  border: 1px solid var(--river);
   border-radius: var(--radius);
 }
 
 .about-figure figcaption {
   margin-top: 0.5rem;
-  color: var(--spruce);
+  color: var(--river);
   font-size: 0.95rem;
 }
 
@@ -568,8 +614,8 @@ a {
 
 .creds summary {
   cursor: pointer;
-  color: var(--spruce);
-  font-weight: 650;
+  color: var(--river);
+  font-weight: 600;
 }
 
 .cred-groups {
@@ -613,7 +659,7 @@ a {
 }
 
 .direct-list a {
-  font-weight: 650;
+  font-weight: 600;
   text-underline-offset: 0.18em;
 }
 
@@ -649,7 +695,7 @@ a {
 }
 
 .field label {
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .field-optional label,
@@ -704,7 +750,7 @@ textarea {
 
 .error {
   color: var(--error);
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .error:empty {
@@ -722,7 +768,7 @@ textarea {
 .form-status {
   min-height: 1.4rem;
   margin: 0.85rem 0;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .fallback {
@@ -744,7 +790,7 @@ textarea {
 .privacy {
   margin: 0.75rem 0 0;
   max-width: 68ch;
-  color: var(--spruce);
+  color: var(--river);
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -767,7 +813,7 @@ textarea {
 
 .site-footer {
   padding: 2.5rem 0;
-  background: var(--spruce);
+  background: var(--river-deep);
   color: var(--paper);
 }
 
@@ -780,7 +826,7 @@ textarea {
 }
 
 .site-footer .mark-letters {
-  fill: var(--spruce);
+  fill: var(--river);
 }
 
 .footer-bar {
@@ -803,7 +849,7 @@ textarea {
 .legal {
   width: 100%;
   margin: 0.25rem 0 0;
-  color: var(--paper);
+  color: var(--linen);
   font-size: 1rem;
 }
 
@@ -857,20 +903,22 @@ button,
   }
 
   .hero-main {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) 22.5rem;
     grid-template-areas:
       "copy media"
       "note .";
     column-gap: 4rem;
     row-gap: 0.85rem;
-    align-items: stretch;
+    align-items: start;
   }
 
   .hero-media {
-    width: auto;
-    height: 100%;
-    aspect-ratio: 1 / 1;
+    width: 100%;
     justify-self: end;
+  }
+
+  .hero-media img {
+    aspect-ratio: 4 / 5;
   }
 
   .cards-services {
@@ -941,7 +989,7 @@ button,
 
   html.js .primary-nav.is-open {
     display: block;
-    box-shadow: 0 16px 28px rgba(18, 53, 44, 0.12);
+    box-shadow: 0 16px 28px rgba(36, 66, 92, 0.12);
   }
 
   html.js .primary-nav ul {
@@ -985,7 +1033,7 @@ button,
     right: 0;
     bottom: 0;
     z-index: 50;
-    background: var(--spruce);
+    background: var(--river-deep);
     padding-bottom: env(safe-area-inset-bottom);
   }
 
@@ -996,7 +1044,7 @@ button,
     min-height: 3.4rem;
     padding: 0.75rem 1rem;
     color: var(--paper);
-    font-weight: 650;
+    font-weight: 600;
     text-align: center;
     text-decoration: none;
   }
