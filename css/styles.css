@@ -332,6 +332,40 @@ a {
 
 .hero-copy {
   grid-area: copy;
+  position: relative;
+}
+
+.hero-textonly {
+  position: relative;
+  text-align: center;
+}
+
+.hero-watermark {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  z-index: 0;
+  width: min(36rem, 130%);
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.hero-textonly .hero-copy > :not(.hero-watermark),
+.hero-textonly .hero-note {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-textonly .lede,
+.hero-textonly h1,
+.hero-textonly .hero-rule {
+  margin-inline: auto;
+}
+
+.hero-textonly .actions {
+  justify-content: center;
 }
 
 .hero-note {
@@ -919,6 +953,15 @@ button,
 
   .hero-media img {
     aspect-ratio: 4 / 5;
+  }
+
+  .hero-main.hero-textonly {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "note";
+    max-width: 46rem;
+    margin-inline: auto;
   }
 
   .cards-services {
