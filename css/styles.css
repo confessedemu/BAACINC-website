@@ -374,17 +374,17 @@ a {
   border: 1px solid var(--river);
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--paper);
-  box-shadow: 10px 10px 0 var(--rust);
+  background: var(--linen);
+  aspect-ratio: 1;
 }
 
 .hero-media img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
+  height: 100%;
+  aspect-ratio: 1;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center;
 }
 
 .button {
@@ -947,10 +947,6 @@ button,
   .hero-media {
     width: 100%;
     justify-self: end;
-  }
-
-  .hero-media img {
-    aspect-ratio: 4 / 5;
   }
 
   .cards-services {
