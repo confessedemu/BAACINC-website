@@ -43,6 +43,7 @@
   --error: #6e1c18;
   --rust: #a04a22;
   --sage: #a9b89a;
+  --sage-deep: #5f6e54;
   --serif: Fraunces, "Iowan Old Style", Charter, "Palatino Linotype", Georgia, serif;
   --sans: "Source Sans 3", system-ui, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --header: 4.75rem;
@@ -374,7 +375,7 @@ a {
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--paper);
-  box-shadow: 10px 10px 0 var(--sage);
+  box-shadow: 10px 10px 0 var(--rust);
 }
 
 .hero-media img {
@@ -573,6 +574,37 @@ a {
 
 .step-num {
   margin-bottom: 0.45rem;
+}
+
+#approach {
+  background: var(--sage-deep);
+  color: var(--paper);
+}
+
+#approach h2,
+#approach .kicker,
+#approach .inline-cta,
+#approach .inline-cta a {
+  color: var(--paper);
+}
+
+#approach .inline-cta a:focus-visible {
+  outline-color: var(--paper);
+}
+
+#approach .step {
+  background: var(--paper);
+  border-color: var(--sage);
+  border-top: 6px solid var(--sage);
+  color: var(--ink);
+}
+
+#approach .step h3 {
+  color: var(--river);
+}
+
+#approach .step-num {
+  color: var(--sage-deep);
 }
 
 .about-grid {
@@ -1098,6 +1130,17 @@ button,
 
   .site-header {
     position: static;
+  }
+
+  #approach {
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  #approach h2,
+  #approach .kicker,
+  #approach .inline-cta a {
+    color: var(--river);
   }
 
   body {
